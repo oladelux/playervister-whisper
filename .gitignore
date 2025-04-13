@@ -1,0 +1,72 @@
+.qodo
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+soccer_whisper_env/
+.env
+
+# Model files and data
+*.pt
+*.pth
+*.bin
+*.onnx
+*.safetensors
+*.model
+models/*/
+models/**/
+data/processed*/
+data/audio_wav/
+wandb/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs and temp files
+logs/
+*.log
+temp/
+tmp/
+
+# Large text files that may contain training data
+*.jsonl
+*.csv
+*.tsv
+
+# Cache directories
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Specific to your project
+transcriptions.json

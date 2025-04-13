@@ -1,0 +1,10 @@
+5 tackle successful. 7 pass successful. 10 dribble successful. 
+9 shot on target. 1 save. 4 clearance successful. 
+8 aerial duel won. 6 interception successful. 11 pass unsuccessful. 
+7 cross successful. 9 shot blocked. 10 foul committed. 
+5 yellow card. 8 pass successful. 7 dribble successful. 
+10 shot off target. 1 goal kick. 4 tackle successful. 
+6 pass unsuccessful. 11 interception successful. 9 shot saved. 
+5 clearance successful. 8 aerial duel lost. 7 pass successful. 
+10 cross unsuccessful. 9 dribble successful. 1 save reflex. 
+4 block successful. 6 pass successful. 8 long pass unsuccessful.
