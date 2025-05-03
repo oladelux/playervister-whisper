@@ -1,4 +1,3 @@
-.qodo
 # Python
 __pycache__/
 *.py[cod]
@@ -21,52 +20,36 @@ var/
 .installed.cfg
 *.egg
 
-# Virtual environments
+# Environments
+.env
+.venv
+env/
 venv/
 ENV/
+env.bak/
+venv.bak/
 soccer_whisper_env/
-.env
 
-# Model files and data
-*.pt
-*.pth
-*.bin
-*.onnx
-*.safetensors
-*.model
+# Models and data
 models/*/
-models/**/
-data/processed*/
-data/audio_wav/
-wandb/
+!models/.gitkeep
+data/processed/
+evaluation_results/
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*.ipynb
-
-# IDE files
-.idea/
-.vscode/
-*.swp
-*.swo
-.DS_Store
-
-# Logs and temp files
-logs/
-*.log
-temp/
-tmp/
-
-# Large text files that may contain training data
-*.jsonl
-*.csv
-*.tsv
-
-# Cache directories
-.cache/
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Specific to your project
-transcriptions.json
