@@ -1,25 +1,30 @@
 {
-  "model_name": "openai/whisper-small",
+  "model_name": "openai/whisper-large-v2",
   "training": {
-    "num_epochs": 10,
-    "batch_size": 8,
-    "learning_rate": 1e-5,
+    "num_epochs": 30,
+    "batch_size": 4,
+    "learning_rate": 5e-6,
     "weight_decay": 0.01,
-    "warmup_steps": 500,
-    "max_steps": 4000,
-    "gradient_accumulation_steps": 2,
+    "warmup_steps": 100,
+    "max_steps": -1,
+    "gradient_accumulation_steps": 4,
     "freeze_encoder": true,
     "gradient_checkpointing": true,
     "fp16": true,
     "evaluation_strategy": "steps",
-    "eval_steps": 500,
+    "eval_steps": 50,
     "save_strategy": "steps",
-    "save_steps": 500,
-    "logging_steps": 50,
+    "save_steps": 50,
+    "logging_steps": 10,
     "save_total_limit": 3,
     "load_best_model_at_end": true,
     "metric_for_best_model": "wer",
-    "greater_is_better": false
+    "greater_is_better": false,
+    "label_smoothing": 0.1,
+    "group_by_length": true,
+    "num_workers": 4,
+    "early_stopping_patience": 10,
+    "early_stopping_threshold": 0.001
   },
   "data": {
     "train_split": 0.8,
@@ -27,16 +32,21 @@
     "test_split": 0.1,
     "normalize_audio": true,
     "sample_rate": 16000,
-    "max_duration": 30
-  },
-  "preprocessing": {
-    "normalize_text": true,
+    "max_duration": 30,
     "augmentation": {
       "enabled": true,
       "noise_level": 0.005,
-      "pitch_shift_range": 2,
-      "speed_range": 0.2,
-      "num_augmentations": 3
+      "pitch_shift_range": 1.5,
+      "speed_range": 0.15,
+      "num_augmentations": 5
+    }
+  },
+  "preprocessing": {
+    "normalize_text": true,
+    "text_cleaning": {
+      "remove_special_characters": false,
+      "lowercase": false,
+      "standardize_punctuation": true
     }
   },
   "generation": {
@@ -45,5 +55,9 @@
     "max_length": 225,
     "num_beams": 5,
     "temperature": 0.0
-  }
+  },
+  "use_wandb": false,
+  "wandb_project": "football-whisper",
+  "wandb_run_name": "football-whisper-large-v2",
+  "push_to_hub": false
 }
